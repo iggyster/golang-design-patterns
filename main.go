@@ -11,6 +11,13 @@ func main() {
 	creational.GetInstance()
 	creational.GetInstance()
 
+	// Factory method
+	building := creational.Factory("white house")
+	building.GetInfo()
+
+	building = creational.Factory("empire state")
+	building.GetInfo()
+
 	// Decorator
 	logger := structural.Logger{}
 	upperLogger := structural.UpperCaseLogger{Logger: logger}
